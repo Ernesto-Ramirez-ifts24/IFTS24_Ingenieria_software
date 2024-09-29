@@ -1,0 +1,187 @@
+@font-face {
+    font-family: Rubik;
+    src: url(/rsc/fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2rem;
+    min-height: auto;
+    padding: 10px;
+    background-image: url(/rsc/img/fondo_1.jpg);
+    background-size: cover;
+}
+.grid-container > * {
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 200;
+    color: #f5f5f5;
+}
+.grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template:
+    "header header" 100px
+    "navbar navbar" 50px
+    "main sidebar" auto 
+    "footer footer" 100px;
+}
+.header {
+    border-radius:unset;
+    grid-area: header;
+    background-image: url(/rsc/img/pyramides_hd_titulo.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.navbar {
+    grid-area: navbar;
+    
+}
+
+.sidebar {
+    grid-area: sidebar;
+ 
+}
+
+.main {
+    grid-area: main;
+    
+}
+
+.footer {
+    grid-area: footer;
+    
+}
+@media (max-width: 576px) {
+    .grid-container{
+        grid-template: 
+            "header" 100px
+            "navbar" 50px
+            "main" auto
+            "sidebar" auto
+            "footer" 100px/
+            100%
+    }
+}
+
+@media (min-width: 765px) {
+    .grid-container{
+        grid-template:
+        "header header header" 100px
+        "navbar navbar navbar" 50px
+        "main main sidebar" auto
+        "footer footer footer" 100px/
+        70% auto;
+} 
+}
+
+
+.nav-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-evenly;
+    align-content: center;
+    row-gap: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(33, 49, 49);
+    margin: 8px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    transition: 0.2s all;
+}
+
+.btn:hover {
+    background-color: #680303;
+    color: white;
+    font-size: x-large;
+}
+
+.login-container {
+    width: auto;
+    background-color: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(33, 49, 49);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #680303;
+}
+
+#iconos  i {
+    font-size: 26px;
+    padding: 0 8px;
+    color:#f3f3f3;
+}
+
+.fotos-container{
+display: flex;
+grid-template-rows: repeat(auto);
+padding: 5px;
+justify-content: space-between;
+gap: 10px;
+}
+.fotos-items img{
+    overflow: scroll;
+    width: 100%;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    
+}
+

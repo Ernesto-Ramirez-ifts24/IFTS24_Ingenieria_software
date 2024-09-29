@@ -1,0 +1,59 @@
+.discografia {
+    background-color: none;
+    padding: 50px 0;
+}
+
+.discografia-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    align-content: end;
+    justify-content: center;
+}
+
+.album {
+    width: 300px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(226, 223, 223, 0.1);
+}
+
+.album img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 30px;
+}
+
+.album-info {
+    padding: 20px;
+}
+
+.album-info h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.album-info p {
+    margin-bottom: 20px;
+}
+article ol{
+    justify-content: center;
+
+}
+
+.btn2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #253e4e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn2:hover {
+    background-color: #680303;
+}
