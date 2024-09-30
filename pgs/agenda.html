@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/rsc/img/favicon/favicon.ico" type="favicon_amalgama">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style_agenda.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <title>Agenda</title>
 </head>
 <body class="grid-container"> 
@@ -16,95 +17,43 @@
         <div>
             <ul class="nav-list">
             <li><a class="btn" href="/index.html">Inicio</a></li>
-            <li><a class="btn" href="/pgs/biografia.html">Biografía</a></li>
+            <!-- <li><a class="btn" href="/pgs/biografia.html">Biografía</a></li>
             <li><a class="btn" href="/pgs/agenda.html">Agenda</a></li>
             <li><a class="btn" href="/pgs/discografia.html">Discografía</a></li>
             <li><a class="btn" href="/pgs/tienda.html">Tienda</a></li>
-            <li><a class="btn" href="/pgs/comunidad.html">Comunidad</a></li>
+            <li><a class="btn" href="/pgs/comunidad.html">Comunidad</a></li> -->
             </ul>
         </div>
     </nav>
     <main class="main">
         <h1>Agenda</h1>
-        <section class="concert-dates">
-            <h2>Próximas Presentaciones de Pyrámides</h2>
-            
+        <section class="concert-dates">   
             <table>
-                <caption>Buenos Aires</caption>
                 <thead>
                     <tr>
-                        <th>Fecha</th>
                         <th>Lugar</th>
+                        <th>Fecha</th>
+                        <th>Editar</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>12 de Julio, 2024</td>
-                        <td>Teatro Vorterix</td>
-                    </tr>
-                    <tr>
-                        <td>25 de Agosto, 2024</td>
-                        <td>Estadio Luna Park</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <table>
-                <caption>Mar del Plata</caption>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Lugar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2 de Septiembre, 2024</td>
-                        <td>Estadio José María Minella</td>
-                    </tr>
-                    <tr>
-                        <td>18 de Septiembre, 2024</td>
-                        <td>Teatro Auditorium</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <table>
-                <caption>Barcelona</caption>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Lugar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>5 de Octubre, 2024</td>
-                        <td>Palau Sant Jordi</td>
-                    </tr>
-                    <tr>
-                        <td>20 de Octubre, 2024</td>
-                        <td>Razzmatazz</td>
-                    </tr>
-                </tbody>
+                <tbody id="taskList"></tbody>
             </table>
         </section>
-        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4658041723574!2d2.1494655753076706!3d41.363963497448886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a26c35ec4be9%3A0x9e9035c097bdfdf4!2sPalau%20Sant%20Jordi!5e0!3m2!1ses-419!2sar!4v1719442024974!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </main>
     <aside class="sidebar">
         <article>
             <div class="login-container">
-                <form action="#" method="post" class="login-form">
-                    <h2>Login</h2>
+                <form action="#" method="post" class="form_task">
+                    <h2>Administrar eventos</h2>
                     <div class="form-group">
-                        <label for="username">Usuario:</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="Lugar">Lugar:</label>
+                        <input class="form_input" id="taskInput" type="text" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Contraseña:</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="Fecha">Fecha:</label>
+                        <input class="form_input" id="dateInput" type="date" required>
                     </div>
-                    <button type="submit">Iniciar Sesión</button>
+                    <button type="submit">Guardar</button>
                 </form>
             </div>
         </article>
@@ -112,10 +61,11 @@
     <footer class="footer">
         <div id="iconos">
             <a href="https://www.facebook.com/pyramidespostpunk/?locale=es_LA"><i class="bi bi-facebook"></i></a>
-            <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.instagram.com%2Fpyramidesoficial%2F"><i class="bi bi-twitter"></i></a>
+            <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.instagram.com%2Fpyramidesoficial%2F"><i class="bi bi-twitter-x"></i></a>
             <a href="https://www.instagram.com/pyramidesoficial/"><i class="bi bi-instagram"></i></a>  
         </div>
         <p>Derechos reservados - 2024</p>
     </footer>
 </body>
+<script src="../js/script.js"></script>
 </html>

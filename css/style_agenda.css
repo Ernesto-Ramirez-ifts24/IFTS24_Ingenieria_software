@@ -1,3 +1,5 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"); 
+
 .concert-dates {
     max-width: 800px;
     margin: 0 auto;
@@ -18,12 +20,6 @@ table {
     border-collapse: collapse;
 }
 
-caption {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
 table th, table td {
     padding: 10px;
     text-align: left;
@@ -32,4 +28,24 @@ table th, table td {
 
 tbody tr:nth-child(even) {
     background-color: none;
+}
+
+.tasks__item {
+    display: center;
+    justify-content: space-between;
+}
+
+.done {
+text-decoration: line-through;
+color: #3f6ccc;
+}
+
+.bx-check {
+color: rgb(12, 167, 12);
+cursor: pointer;
+}
+
+.bx-trash {
+color: rgb(179, 6, 6);
+cursor: pointer;
 }
