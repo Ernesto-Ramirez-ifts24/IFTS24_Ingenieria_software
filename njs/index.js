@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+app.use(express.static("publica")); //carpeta de acceso público
+
 app.use(express.json());
 
 const eventosRouter = require('../routers/eventos.router');
