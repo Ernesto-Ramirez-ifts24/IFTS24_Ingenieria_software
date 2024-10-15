@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/rsc/img/favicon/favicon.ico" type="favicon_amalgama">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style_agenda.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Agenda</title>
+</head>
+<body class="grid-container"> 
+    <header class="header">
+        <section></section>
+    </header>
+    <nav class="navbar">
+        <div>
+            <ul class="nav-list">
+            <li><a class="btn" href="/index.html">Inicio</a></li>
+            <!-- <li><a class="btn" href="/pgs/biografia.html">Biografía</a></li>
+            <li><a class="btn" href="/pgs/agenda.html">Agenda</a></li>
+            <li><a class="btn" href="/pgs/discografia.html">Discografía</a></li>
+            <li><a class="btn" href="/pgs/tienda.html">Tienda</a></li>
+            <li><a class="btn" href="/pgs/comunidad.html">Comunidad</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <h1>Agenda</h1>
+        <section class="concert-dates">   
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lugar</th>
+                        <th>Fecha</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody id="taskList"></tbody>
+            </table>
+        </section>
+    </main>
+    <aside class="sidebar">
+        <article>
+            <div class="login-container">
+                <form action="#" method="post" class="form_task">
+                    <h2>Administrar eventos</h2>
+                    <div class="form-group">
+                        <label for="Lugar">Lugar:</label>
+                        <input class="form_input" id="taskInput" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Fecha">Fecha:</label>
+                        <input class="form_input" id="dateInput" type="date" required>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </article>
+    </aside>
+    <footer class="footer">
+        <div id="iconos">
+            <a href="https://www.facebook.com/pyramidespostpunk/?locale=es_LA"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.instagram.com%2Fpyramidesoficial%2F"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/pyramidesoficial/"><i class="bi bi-instagram"></i></a>  
+        </div>
+        <p>Derechos reservados - 2024</p>
+    </footer>
+</body>
+<script src="../js/script.js"></script>
+</html>
