@@ -12,6 +12,8 @@ app.use('/db/productos', productosRouter);
 const categoriasRouter = require('./routers/categorias.routes');
 app.use('/db/categorias', categoriasRouter);
 
+const usuariosRouter = require('./routers/usuarios.routes');
+app.use('/db/usuarios', usuariosRouter);
 
 app.get("/", (req, res) => {
     res.send("HOLA NODE EXPRESS!!!!!"); //ruta principal

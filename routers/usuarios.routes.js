@@ -7,7 +7,7 @@ const path = require("path");
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
-        cb(null, 'img_productos');
+        cb(null, 'img_usuarios');
     },
     filename: (req, file, cb) => {
         console.log(file);
@@ -37,28 +37,28 @@ const upload = multer({
 
 
 
-const controller = require("../controllers/productos.controllers");
+const controller = require("../controllers/usuarios.controllers");
 
 // GET
 
-router.get('/', controller.all_productos);
+router.get('/', controller.all_usuarios);
 
-router.get('/:id_producto', controller.show_productos);
+router.get('/:id_usuario', controller.show_usuarios);
 
 
 // POST
 
-router.post('/',upload.single("imagen_url"), controller.store_productos);
+router.post('/',upload.single("imagen_usuario"), controller.store_usuarios);
 
 
 // PUT 
 
-router.put('/:id_producto', controller.update_productos);
+router.put('/:id_usuario', controller.update_usuarios);
 
 
 // DELETE 
 
-router.delete('/:id_producto', controller.destroy_productos);
+router.delete('/:id_usuario', controller.destroy_usuarios);
 
 
 module.exports = router;

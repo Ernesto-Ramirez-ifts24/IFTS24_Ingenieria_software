@@ -12,7 +12,7 @@ const all_productos = (req, res) => {
 
 const show_productos = (req, res) =>{
     const {id} = req.params;
-    const sql = "SELECT * FROM productos WHERE id = ?";
+    const sql = "SELECT * FROM productos WHERE id_producto = ?";
     db.query(sql, [id], (error, rows) => {
         console.log(rows);
         if(error){
@@ -48,10 +48,10 @@ const store_productos = (req, res) => {
 };
 
 const update_productos = (req, res) => {
-    const {id} = req.params;
+    const {id_producto} = req.params;
     const {nombre, descripcion, precio, stock, imagen_url} = req.body;
-    const sql = "UPDATE productos SET nombre = ?, decripcion = ?, precio = ?, stock = ?, imagen_url = ?, WHERE id = ?";
-    db.query(sql,[nombre, descripcion, precio, stock, imagen_url, id], (error, result) => {
+    const sql = "UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, stock = ?, imagen_url = ? WHERE id_producto = ?";
+    db.query(sql,[nombre, descripcion, precio, stock, imagen_url, id_producto], (error, result) => {
         console.log(result);
         if(error){
             return res.status(500).json({error: "Intente mas tarde por favor"});
@@ -67,9 +67,9 @@ const update_productos = (req, res) => {
 };
 
 const destroy_productos = (req, res) => {
-    const {id} = req.params;
-    const sql = "DELETE FROM producto WHERE id = ?";
-    db.query(sql,[id], (error, result) => {
+    const {id_producto} = req.params;
+    const sql = "DELETE FROM productos WHERE id_producto = ?";
+    db.query(sql,[id_producto], (error, result) => {
         console.log(result);
         if(error){
             return res.status(500).json({error: "Intente mas tarde por favor"});
